@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAMA Hotel | Vashi, Navi Mumbai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <b>WAMA</b>
+    <div>
+      <a href="#rooms">Rooms</a>
+      <a href="#booking">Book</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>WAMA</h1>
+    <h2>A Comfortable Stay in Vashi</h2>
+    <p>Clean rooms, friendly staff and easy access to all of Navi Mumbai.</p>
+    <a class="button gold" href="#booking">Check Availability</a>
+  </header>
+
+  <section class="light">
+    <h2>Where Comfert Meets</h2>
+    <p class="center">
+      Welcome to WAMA, a warm and modern stay in the heart of Vashi. Wake up in a quiet,
+      comfortable room, enjoy a good meal at our restaurant and step out to the station,
+      malls and offices within minutes. Whether you are here for work or a weekend with family,
+      our team is at the desk day and night to make you feel at home.
+    </p>
+  </section>
+
+  <section id="rooms">
+    <h2>Rooms and Rates</h2>
+    <div class="grid" id="roomList"></div>
+  </section>
+
+  <section class="light">
+    <h2>Hotel Views</h2>
+    <div class="grid">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JSlTDSNXJHX5nhHd1NPDnbOUQFy7NhEMbYzHxHcWKw&s=10" alt="Hotel and pool">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy-6edOe6vWpWqpVdNICl-Is2A_i1XGypRbZ7ToK_qwg&s=10" alt="kids play zone">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KVIS5X8Rmv6CgBpXeAAK9N4Jvqe-O7nod9b8iCOdVQ&s=10" alt="dined">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl65LexQf80nRJlJwvY46L_Gu02FhYhJYsU9npTNOcTQ&s=10" alt="Hotel room view">
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Stay</h2>
+    <form class="panel" id="bookingForm">
+
+      <h3>1. Choose your dates</h3>
+      <div class="two-col">
+        <label>Check-in <input type="date" id="checkIn" required></label>
+        <label>Check-out <input type="date" id="checkOut" required></label>
+      </div>
+      <div class="center" id="nights"></div>
+      <div class="grid" id="availability"></div>
+
+      <h3>2. Guest details</h3>
+      <div class="two-col">
+        <label>Name <input type="text" id="name" required></label>
+        <label>Mobile
+          <input type="text" id="mobile" maxlength="10" pattern="[0-9]{10}" inputmode="numeric"
+                 placeholder="10-digit number" title="Enter exactly 10 digits" required>
+        </label>
+        <label>Email <input type="email" required></label>
+        <label>Address <input type="text" required></label>
+        <label>ID Proof Type
+          <select>
+            <option>Aadhaar Card</option>
+            <option>Passport</option>
+            <option>Driving Licence</option>
+            <option>Voter ID</option>
+          </select>
+        </label>
+        <label>ID Proof Number <input type="text" required></label>
+        <label>Room Type <select id="roomType"></select></label>
+        <label>Number of Rooms <input type="number" id="roomCount" min="1" value="1" required></label>
+      </div>
+
+      <button class="book-btn" type="submit">Book Now</button>
+      <div id="message"></div>
+    </form>
+  </section>
+
+  <section class="light" id="menu">
+    <h2>Our Restaurant Menu</h2>
+    <p class="center">Freshly cooked in our kitchen, served from 7 AM to 11 PM.</p>
+
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="Restaurant dish">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Restaurant hall">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="Kitchen food">
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Starters</h3>
+        <p class="menu-item"><span>Paneer Tikka</span><b>₹280</b></p>
+        <p class="menu-item"><span>Veg Spring Rolls</span><b>₹220</b></p>
+        <p class="menu-item"><span>Chicken 65</span><b>₹320</b></p>
+        <p class="menu-item"><span>Tomato Soup</span><b>₹150</b></p>
+      </div>
+      <div class="card">
+        <h3>Main Course</h3>
+        <p class="menu-item"><span>Butter Chicken</span><b>₹380</b></p>
+        <p class="menu-item"><span>Dal Tadka with Rice</span><b>₹240</b></p>
+        <p class="menu-item"><span>Veg Biryani</span><b>₹290</b></p>
+        <p class="menu-item"><span>Butter Naan</span><b>₹60</b></p>
+      </div>
+      <div class="card">
+        <h3>Desserts and Drinks</h3>
+        <p class="menu-item"><span>Gulab Jamun</span><b>₹120</b></p>
+        <p class="menu-item"><span>Ice Cream</span><b>₹130</b></p>
+        <p class="menu-item"><span>Masala Chai</span><b>₹60</b></p>
+        <p class="menu-item"><span>Fresh Lime Soda</span><b>₹90</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Facilities</h2>
+    <div class="grid">
+      <div class="card center"><span class="icon">📶</span>Wi-Fi</div>
+      <div class="card center"><span class="icon">🚗</span>Parking</div>
+      <div class="card center"><span class="icon">🍽️</span>Restaurant</div>
+      <div class="card center"><span class="icon">🏊</span>Swimming Pool</div>
+      <div class="card center"><span class="icon">🛎️</span>Room Service</div>
+      <div class="card center"><span class="icon">🕐</span>24/7 Reception</div>
+    </div>
+  </section>
+
+  <section class="light">
+    <h2>Guest Reviews</h2>
+    <div class="grid">
+      <div class="card review"><p>⭐⭐⭐⭐⭐</p><p>"Clean rooms and friendly staff. Great location."</p><b>Rahul S.</b></div>
+      <div class="card review"><p>⭐⭐⭐⭐⭐</p><p>"Comfortable stay and very good breakfast."</p><b>Priya M.</b></div>
+      <div class="card review"><p>⭐⭐⭐⭐</p><p>"Easy to reach from the station. Good value."</p><b>Amit K.</b></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <div class="footer-grid">
+      <p>📍 WAMA, Vashi, Navi Mumbai</p>
+      <p>📞 +91 22 1234 5678</p>
+      <p>✉️ info@wamahotel.example</p>
+      <p>🕐 Reception: 24/7</p>
+    </div>
+    <p class="copy">© 2026 WAMA Hotel. Thank you for visiting.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
